@@ -1,0 +1,8 @@
+uuid: 427b53da-d43c-43ab-86a6-ec946cdea788
+langcode: en
+status: true
+dependencies: {  }
+id: visitez_la_concession
+label: check_cars
+revision: 0
+description: 'un bloc avec une partie text et une partie image '

@@ -1,0 +1,28 @@
+uuid: 80e7baf6-d5cc-4b84-8924-cce599c94f54
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  fb_pages: 'https://www.facebook.com/people/Nadaracars-Daz/pfbid025r7VXuLAZUPeyem9KsHNFfCTAnm527t6JuZW134EcppewNgGn1Ea2bpARnGwWwyMl/'
+  keywords: 'Véhicule,voiture,import,export,france,algerie,clio,passat,bmw,acheter,neuve'
+  og_country_name: Algerie
+  og_description: "Bienvenue sur notre plateforme de vente de véhicules d'occasion âgés de moins de 3 ans (2022-2024).\r\n[site:name] vous propose un service d'accompagnement pour l'achat de véhicules d'occasion.\r\nLivraison directe en Algérie par bateau ou disponible dans notre concession local"
+  og_image: 'http://localhost/my_site_name_dir/web/sites/default/files/2024-05/newlogo.png'
+  og_image_alt: 'Nadaracars Logo'
+  og_postal_code: '213'
+  og_region: Algerie
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'
+  og_type: 'vendre voiture'
+  og_url: '[site:base-url]'
+  title: '[current-page:title] | [site:name]'
+  twitter_cards_description: "Bienvenue sur notre plateforme de vente de véhicules d'occasion âgés de moins de 3 ans (2022-2024). [site:name] vous propose un service d'accompagnement pour l'achat de véhicules d'occasion. Livraison directe en Algérie par bateau ou disponible dans notre concession local"
+  twitter_cards_image: 'http://localhost/my_site_name_dir/web/sites/default/files/2024-05/newlogo.png'
+  twitter_cards_image_alt: 'Logo nadaracars'
+  twitter_cards_title: '[site:name]'
+  twitter_cards_type: summary_large_image

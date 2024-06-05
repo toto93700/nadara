@@ -1,0 +1,25 @@
+uuid: 2b97068b-de47-4377-98c2-93de1b3892d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ww_radix_6
+_core:
+  default_config_hash: qrnBK_bgxEeTyEdOi_Y787PwKOo9RSyg5dTFtxw3qdQ
+id: ww_radix_6_branding
+theme: ww_radix_6
+region: navbar_branding
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

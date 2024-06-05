@@ -1,0 +1,25 @@
+uuid: cf75be67-edc1-4b00-8dec-7f808b6f1ea3
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:navicons:81c4ec68-68c0-4367-adf6-5f0d8b1630c3'
+  module:
+    - block_content
+  theme:
+    - ww_radix_6
+id: ww_radix_6_navicons1_2
+theme: ww_radix_6
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:81c4ec68-68c0-4367-adf6-5f0d8b1630c3'
+settings:
+  id: 'block_content:81c4ec68-68c0-4367-adf6-5f0d8b1630c3'
+  label: navicons-1
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

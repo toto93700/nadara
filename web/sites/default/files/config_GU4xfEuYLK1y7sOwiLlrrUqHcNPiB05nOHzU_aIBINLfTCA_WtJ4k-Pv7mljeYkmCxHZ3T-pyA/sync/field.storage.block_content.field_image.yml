@@ -1,0 +1,30 @@
+uuid: a7de0428-653b-49ee-9468-536d13c67478
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+id: block_content.field_image
+field_name: field_image
+entity_type: block_content
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 46de0344-5d09-4a4c-85f4-04a849b466f4
+    alt: showroom
+    title: 'showroom de voitures'
+    width: 500
+    height: 500
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

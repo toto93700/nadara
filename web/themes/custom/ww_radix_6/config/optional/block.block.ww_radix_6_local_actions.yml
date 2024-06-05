@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ww_radix_6
+id: ww_radix_6_local_actions
+theme: ww_radix_6
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Primary admin actions"
+  label_display: "0"
+  provider: core
+visibility: {}

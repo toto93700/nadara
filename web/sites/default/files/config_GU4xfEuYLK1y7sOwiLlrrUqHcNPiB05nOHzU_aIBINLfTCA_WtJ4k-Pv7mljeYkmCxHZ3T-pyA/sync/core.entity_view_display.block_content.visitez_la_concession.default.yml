@@ -1,0 +1,36 @@
+uuid: 51165905-a22e-4d8d-8859-fc72b32c7d11
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.visitez_la_concession
+    - field.field.block_content.visitez_la_concession.body
+    - field.field.block_content.visitez_la_concession.field_cars
+  module:
+    - image
+    - text
+id: block_content.visitez_la_concession.default
+targetEntityType: block_content
+bundle: visitez_la_concession
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cars:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,48 @@
+{
+	"title": "Radix/Image",
+	"description": "A customizable image component with configurations for alignment, responsiveness, thumbnail style, and rounded edges.",
+	"argTypes": {
+		"align": {
+			"name": "Image Alignment",
+			"description": "(Optional) Align images using helper float classes or text alignment classes. Block-level images can be centered using the `.mx-auto` margin utility class.",
+			"defaultValue": "",
+			"control": "select",
+			"options": {
+				"None": "",
+				"Start (float-start)": "start",
+				"Center (mx-auto, d-block)": "center",
+				"End (float-end)": "end"
+			}
+		},
+		"responsive": {
+			"name": "Responsive Image",
+			"description": "(Optional) Toggle for responsive image behavior. Applying `.img-fluid` class sets max-width to 100% and height to auto, enabling the image to scale with the parent element's width.",
+			"defaultValue": false,
+			"control": "boolean"
+		},
+		"thumbnails": {
+			"name": "Image with Thumbnail Style",
+			"description": "(Optional) Enable to apply `.img-thumbnail` class for a thumbnail style (rounded 1px border appearance).",
+			"defaultValue": false,
+			"control": "boolean"
+		},
+		"rounded": {
+			"name": "Rounded Image",
+			"description": "(Optional) Enable to apply `.rounded` class for an image with rounded corners.",
+			"defaultValue": false,
+			"control": "boolean"
+		}
+	},
+	"stories": [
+		{
+			"name": "Default Image",
+			"args": {
+				"align": "",
+				"responsive": false,
+				"thumbnails": false,
+				"rounded": false,
+				"attributes": { "src": "https://picsum.photos/id/866/1100/600" }
+			}
+		}
+	]
+}

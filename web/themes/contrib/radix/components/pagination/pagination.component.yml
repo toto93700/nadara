@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Pagination
+status: experimental
+description: 'Documentation and examples for displaying pagination to indicate a series of related content exists across multiple pages.'
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      description: 'Determines the size of the pagination. `"sm"` for smaller pagination, `"lg"` for larger pagination. Leave empty for default size.'
+      enum:
+        - ''
+        - sm
+        - lg
+    alignment:
+      type: string
+      title: Alignment
+      description: 'Determines the alignment of the pagination component. Can be one of `"start"` (default alignment), `"end"` (right aligned), `"center"` (center aligned), or `"vertical"` (vertically stacked).'
+      enum:
+        - ''
+        - start
+        - end
+        - center
+        - vertical
+pagination_utility_classes:
+  type: array
+  items:
+    type: string
+  description: 'Additional utility classes added to the pagination component.'
+items:
+  type: array
+  items:
+    type: object
+    properties:
+      href:
+        type: string
+      text:
+        type: string
+      attributes:
+        type: Drupal\Core\Template\Attribute
+  description: 'The items to be displayed in the pagination component.'

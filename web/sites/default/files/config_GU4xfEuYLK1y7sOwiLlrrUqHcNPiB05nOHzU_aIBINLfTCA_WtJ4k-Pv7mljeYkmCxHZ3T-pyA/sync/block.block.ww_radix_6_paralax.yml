@@ -1,0 +1,30 @@
+uuid: face9563-680d-4184-bd91-e3a67615d0de
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:paralax:e562cdc9-e95b-4e1e-9ee8-8a2089008a67'
+  module:
+    - block_content
+    - system
+  theme:
+    - ww_radix_6
+id: ww_radix_6_paralax
+theme: ww_radix_6
+region: header
+weight: -2
+provider: null
+plugin: 'block_content:e562cdc9-e95b-4e1e-9ee8-8a2089008a67'
+settings:
+  id: 'block_content:e562cdc9-e95b-4e1e-9ee8-8a2089008a67'
+  label: Paralax
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,27 @@
+uuid: 4f1b6529-ae9b-480f-9c75-0336750f01bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.newscars
+id: block_content.newscars.default
+targetEntityType: block_content
+bundle: newscars
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

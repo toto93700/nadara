@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Alert
+status: stable
+description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+props:
+  type: object
+  required:
+    - type
+  properties:
+    type:
+      type: string
+      enum:
+        - primary
+        - secondary
+        - success
+        - danger
+        - warning
+        - info
+        - light
+        - dark
+      default: primary
+    attributes:
+      type: Drupal\Core\Template\Attribute
+slots:
+  alert_heading:
+    title: Alert Heading
+    description: The heading of the alert.
+    required: false
+  content:
+    title: Alert Content
+    description: The content of the alert.
+    required: false

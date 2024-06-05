@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Page Header
+status: experimental
+description: 'The header component of a page, containing the site branding and main navigation.'
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      description: 'HTML attributes for the page header component.'
+    container:
+      type: string
+      enum: ['fixed', 'static']
+      default: 'fixed'
+      description: 'Determines whether the navbar should be fixed or not.'
+    color:
+      type: string
+      default: 'light'
+      description: 'The color scheme of the navbar.'
+    navbar_utility_classes:
+      type: array
+      items:
+        type: string
+      default: ['bg-light']
+      description: 'Additional utility classes for the navbar.'
+slots:
+  branding:
+    type: array
+    title: Branding
+    description: 'The branding section of the page header, usually includes logo and site name.'
+  navigation:
+    type: array
+    title: Navigation
+    description: 'The main navigation of the header.'

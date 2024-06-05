@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override for a single link.
+ *
+ * Available variables:
+ * - link: An associative array with '#url' and '#title' keys representing
+ *         URL and Title of the task.
+ * - is_active: A boolean flag indicating if the task link is for the active route.
+ */
+#}
+<li{{ attributes.addClass('nav-item') }}>
+  <a href="{{ link['#url'] }}" class="nav-link {{ is_active ? 'active' }}">{{ link['#title'] }}</a>
+</li>

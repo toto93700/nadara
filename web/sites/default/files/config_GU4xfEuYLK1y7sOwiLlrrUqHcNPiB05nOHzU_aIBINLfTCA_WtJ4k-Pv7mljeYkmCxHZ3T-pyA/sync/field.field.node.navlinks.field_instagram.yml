@@ -1,0 +1,23 @@
+uuid: 6f76878c-a2c6-4c07-8d8d-12692cdf6935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instagram
+    - node.type.navlinks
+  module:
+    - link
+id: node.navlinks.field_instagram
+field_name: field_instagram
+entity_type: node
+bundle: navlinks
+label: instagram
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

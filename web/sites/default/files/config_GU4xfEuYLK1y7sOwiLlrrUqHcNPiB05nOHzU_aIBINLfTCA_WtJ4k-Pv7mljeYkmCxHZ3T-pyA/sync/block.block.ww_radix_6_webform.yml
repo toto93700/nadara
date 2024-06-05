@@ -1,0 +1,31 @@
+uuid: 57ee320e-96ec-424c-8546-a725ddaeab5a
+langcode: en
+status: false
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - system
+    - webform
+  theme:
+    - ww_radix_6
+id: ww_radix_6_webform
+theme: ww_radix_6
+region: content
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: visible
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/showroom/*'

@@ -1,0 +1,8 @@
+uuid: d1237ae9-a00b-4e9e-a755-5d31703fd72b
+langcode: en
+status: true
+dependencies: {  }
+id: wave
+label: wave
+revision: 0
+description: 'text & image sur fond de vague'

@@ -1,0 +1,5 @@
+name: 'siteModule'
+type: module
+description: 'module de base'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Template for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set form_utility_classes = form_utility_classes ? form_utility_classes : [] %}
+
+{% 
+  set form_classes = [
+    'form',
+    is_inline ? 'form-inline',
+  ]|merge(form_utility_classes) 
+%}
+
+<form{{ attributes.addClass(form_classes) }}>
+  {{ children }}
+</form>

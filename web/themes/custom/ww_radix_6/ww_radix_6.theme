@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Theme functions.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\webform\Entity\Webform;
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.theme';
+foreach (glob($includes_path) as $file) {
+  require_once dirname(__FILE__) . '/includes/' . basename($file);
+}
+
+
+
+function ww_radix_6_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if ($variables['elements']['#id'] == 'ww_radix_paralax') { // Remplacez 'my_custom_block_id' par l'ID de votre bloc personnalisé
+      $suggestions[] = 'block__block_content__paralax';
+  }
+  
+}
+function  ww_radix_6_preprocess_block(&$variables) {
+  
+
+  // Récupérer les 3 derniers articles publiés.
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'car')
+    ->condition('status', 1)
+    ->sort('created', 'DESC')
+    ->range(0, 3)
+    ->accessCheck(true);
+  $nids = $query->execute();
+
+  // Charger les nœuds.
+  $nodes = Node::loadMultiple($nids);
+
+  // Préparer les variables pour les envoyer au template.
+  $variables['latest_cars'] = [];
+  foreach ($nodes as $node) {
+    $images=$node->field_image;
+    $field_items_values = $images;
+
+    foreach ($field_items_values as $delta => $field_item) {
+      // Accédez aux valeurs de chaque élément du champ ici.
+  
+      $fid = $field_item->target_id;//The file ID   
+      $file = \Drupal\file\Entity\File::load($fid);
+      $path = $file->getFileUri();
+      $field_value[] = $path;
+    
+    }
+
+    $variables['latest_cars'][] = [
+      'car_name' => $node->getTitle(),
+      'description' => $node->get('body'),
+      'images' => $field_value,
+      'url' => $node->toUrl()->toString(),
+      'price'=>$node->get('field_price')->getValue()[0]['value']
+      // Vous pouvez ajouter d'autres champs que vous souhaitez afficher.
+    ];
+    
+  }
+}
+
+
+
+
+
+

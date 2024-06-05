@@ -1,0 +1,21 @@
+uuid: 553442b0-4636-4efe-a14c-0b0a9fb51dd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.contact_page
+id: node.contact_page.field_address
+field_name: field_address
+entity_type: node
+bundle: contact_page
+label: address
+description: 'adress du garage'
+required: false
+translatable: false
+default_value:
+  -
+    value: Adress
+default_value_callback: ''
+settings: {  }
+field_type: string

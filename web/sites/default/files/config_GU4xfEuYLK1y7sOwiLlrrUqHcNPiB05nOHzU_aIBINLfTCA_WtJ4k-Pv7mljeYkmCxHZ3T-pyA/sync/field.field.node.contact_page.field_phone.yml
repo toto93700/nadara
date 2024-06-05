@@ -1,0 +1,21 @@
+uuid: 875c1518-5ab3-4e1e-a04e-2c893af0dd3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.contact_page
+id: node.contact_page.field_phone
+field_name: field_phone
+entity_type: node
+bundle: contact_page
+label: phone
+description: 'numéro au phormat ex : 336 10 30 20 50'
+required: false
+translatable: false
+default_value:
+  -
+    value: '336 10 30 20 50'
+default_value_callback: ''
+settings: {  }
+field_type: string

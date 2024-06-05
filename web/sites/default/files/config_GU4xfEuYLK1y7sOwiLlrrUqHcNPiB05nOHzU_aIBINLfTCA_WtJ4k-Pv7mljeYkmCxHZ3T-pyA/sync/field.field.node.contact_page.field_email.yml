@@ -1,0 +1,21 @@
+uuid: eaac291a-14dd-493d-9d63-4f560ec50e2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.contact_page
+id: node.contact_page.field_email
+field_name: field_email
+entity_type: node
+bundle: contact_page
+label: email
+description: 'email afficher dans la page contact'
+required: false
+translatable: false
+default_value:
+  -
+    value: test@test.fr
+default_value_callback: ''
+settings: {  }
+field_type: email

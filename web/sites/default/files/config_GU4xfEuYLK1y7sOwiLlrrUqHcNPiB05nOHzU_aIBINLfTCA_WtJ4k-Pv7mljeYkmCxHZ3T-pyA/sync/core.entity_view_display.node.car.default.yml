@@ -1,0 +1,90 @@
+uuid: 25c3644f-55ec-4581-8581-31d4a35575ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.car.body
+    - field.field.node.car.field_image
+    - field.field.node.car.field_name
+    - field.field.node.car.field_presentation
+    - field.field.node.car.field_price
+    - field.field.node.car.field_tags
+    - field.field.node.car.webform
+    - image.style.wide
+    - node.type.car
+  module:
+    - image
+    - text
+    - user
+    - webform
+id: node.car.default
+targetEntityType: node
+bundle: car
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_presentation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_price:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+hidden:
+  langcode: true

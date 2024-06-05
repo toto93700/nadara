@@ -1,0 +1,60 @@
+.color-theme {
+  background: #a39896;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-indicator-ps {
+  width: 42px;
+  height: 42px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator {
+  list-style: none;
+  padding-top: 20px;
+}
+
+.indicator li {
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.carousel-inner {
+  height: 476px;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.img-container {
+  display: flex;
+  height: 100%;
+}
+
+.img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  align-self: center;
+}
+
+#edit-actions {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=car-full.css.map*/

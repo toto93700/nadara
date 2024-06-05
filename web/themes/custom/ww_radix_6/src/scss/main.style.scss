@@ -1,0 +1,38 @@
+// Bootstrap
+// -----------------------------------------------------------------------------
+@import 'bootstrap';
+
+// Parent Drupal related components
+// -----------------------------------------------------------------------------
+@import 'components/offcanvas/offcanvas';
+
+@import 'components/navbar/navbar';
+@import 'components/paralax/paralax';
+@import 'components/wave/wave';
+@import 'components/cars-front-page/cars-front-page';
+@import 'components/car-teaser/car-teaser';
+@import 'components/car-full/car-full';
+@import 'components/contact-form/contact-form';
+@import 'components/contact/contact';
+@import 'components/page-footer/page-footer';
+@import 'components/more/more';
+@import 'components/navIcons/navIcons';
+
+
+// Include any custom stylesheets here
+// -----------------------------------------------------------------------------
+.theme-color-1{
+    background-color: #06DF86 !important;
+}
+.subtheme-color-1{
+    background-color: #ffffff !important;
+}
+.typotheme-color-1{
+    color: #06DF86 !important;
+}
+.typosubtheme-color-1{
+    color: #ffffff !important;
+}
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}

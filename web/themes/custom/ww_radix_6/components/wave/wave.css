@@ -1,0 +1,31 @@
+.color-theme {
+  background: #a39896;
+}
+
+.wave-container {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wave-container .container-text {
+  font-size: 1.125rem;
+  padding: 25px;
+}
+@media screen and (min-width: (max-width: 991px)) {
+  .wave-container .container-image {
+    display: none;
+  }
+}
+
+.image {
+  padding: 50px 50px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.image img {
+  max-height: 300px;
+  margin-left: 8% !important;
+}
+
+/*# sourceMappingURL=wave.css.map*/

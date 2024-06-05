@@ -1,0 +1,13 @@
+uuid: 2fc5a897-e7b4-4a52-be48-aac78ee3b7ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.newscars
+id: block_content.newscars.default
+targetEntityType: block_content
+bundle: newscars
+mode: default
+content: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,46 @@
+uuid: 8afd6351-6caf-475b-a1db-2f1a629eb0be
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.wave
+    - field.field.block_content.wave.body
+    - field.field.block_content.wave.field_bg
+    - field.field.block_content.wave.field_imageleft
+  module:
+    - file
+    - image
+    - text
+id: block_content.wave.default
+targetEntityType: block_content
+bundle: wave
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_bg:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_imageleft:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

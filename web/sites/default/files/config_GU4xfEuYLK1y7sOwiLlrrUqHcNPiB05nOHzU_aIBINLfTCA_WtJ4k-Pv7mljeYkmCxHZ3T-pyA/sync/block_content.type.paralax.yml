@@ -1,0 +1,8 @@
+uuid: 01afada1-60bd-4541-9cdd-c2b3ed3cd3b6
+langcode: en
+status: true
+dependencies: {  }
+id: paralax
+label: Paralax
+revision: 0
+description: 'un paralax avec image et text'

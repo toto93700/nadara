@@ -1,0 +1,33 @@
+{#
+/**
+* @file
+* Template for newscars component.
+*/
+#}
+
+<section class="container">
+	<div class="row d-flex align-items-stretch justify-content-around ">
+		{% for car in latest_cars %}
+		
+			<article class="col-lg-4 card border-0 shadow mb-5" style="p-5">
+				{% set image_url =  file_url(car.images[0]) %}
+
+				<img class="card-img-top img-fluid" src="{{ file_url(image_url) }}" alt="Card image cap">
+				<div class="card-body p-1">
+					<h2 class="card-title strong">
+						<strong>{{car.car_name}}
+						</strong>
+					</h2>
+					<p class="h2"> <strong>{{car.price}} </strong>€</p>
+					{% for item in car.description %}
+						{{item.Value.value|slice(0, 130) |raw}}
+						..
+					{% endfor %}
+					
+				</div>
+				<a href="{{car.url}}" class="btn btn-primary  mb-3" style="width:fit-content">En savoir plus</a>
+
+			</article>
+		{% endfor %}
+	</div>
+</section>

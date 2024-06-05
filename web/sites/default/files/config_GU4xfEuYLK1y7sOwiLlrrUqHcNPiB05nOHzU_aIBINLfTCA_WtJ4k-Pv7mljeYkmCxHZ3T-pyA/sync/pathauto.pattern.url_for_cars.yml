@@ -1,0 +1,22 @@
+uuid: 8ff5dc4d-374b-483f-983d-61ce0c48aafd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: url_for_cars
+label: 'Url for cars'
+type: 'canonical_entities:node'
+pattern: '/showroom/[node:nid][node:title]'
+selection_criteria:
+  f3463131-c365-490d-98db-a5719708041a:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f3463131-c365-490d-98db-a5719708041a
+    context_mapping:
+      node: node
+    bundles:
+      car: car
+selection_logic: and
+weight: -5
+relationships: {  }

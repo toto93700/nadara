@@ -1,0 +1,25 @@
+uuid: 26ff1a1a-9b16-4449-8f0d-191018797f6c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ww_radix_6
+id: ww_radix_6_mainnavigation
+theme: ww_radix_6
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

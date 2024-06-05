@@ -1,0 +1,30 @@
+@import "../../src/scss/init";
+
+.container-cars-front-page {
+    .container-text {
+        background-image: linear-gradient(135deg, rgb(214, 255, 127) 0%, rgb(0, 179, 204) 100%);
+        padding: 160px 48px 160px 48px;
+        
+        h2 {
+            margin-bottom: 2rem;
+            font-weight: 900;
+            font-size: calc(1.8625rem + 1.35vw);
+        }
+        
+        .p-text-in-edit {
+            line-height: 2.75rem;
+            font-size: calc(1.3625rem + 1.35vw);
+        }
+    }
+    
+    .container-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 650px;
+        
+        @media screen and (min-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+}

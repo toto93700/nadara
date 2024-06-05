@@ -1,0 +1,30 @@
+uuid: d523d3de-37d6-46ef-a144-180a1fc5c4c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+id: block_content.field_imageleft
+field_name: field_imageleft
+entity_type: block_content
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 24ba4bac-cc9a-47bf-9d90-fce12e014098
+    alt: 'Image voiture'
+    title: voiture
+    width: 1920
+    height: 1280
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

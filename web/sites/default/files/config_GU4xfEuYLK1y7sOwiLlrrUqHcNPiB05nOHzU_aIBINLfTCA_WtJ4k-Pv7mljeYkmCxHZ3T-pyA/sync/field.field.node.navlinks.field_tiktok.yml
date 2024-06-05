@@ -1,0 +1,23 @@
+uuid: 904eb2d3-79b9-48dd-aac7-2adf4d3f04eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tiktok
+    - node.type.navlinks
+  module:
+    - link
+id: node.navlinks.field_tiktok
+field_name: field_tiktok
+entity_type: node
+bundle: navlinks
+label: tiktok
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

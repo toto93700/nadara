@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for an image component.
+ * 
+ * Available properties:
+ * - align: (optional) Determines how the image is aligned. Can be 'start', 'center', or 'end'.
+ * - responsive: (optional) Makes the image responsive if set to true. Default img class is `.img-fluid`.
+ * - thumbnails: (optional) Adds a thumbnail style to the image if set to true. Class added is `.img-thumbnail`.
+ * - rounded: (optional) Applies rounded corners to the image if set to true. Class added is `.rounded`.
+ * - image_utility_classes: (optional) A list of additional classes to be added to the image's class attribute.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the image tag.
+ */
+#}
+{% set align_classes = {
+  start: ['float-start'],
+  center: ['mx-auto', 'd-block'],
+  end: ['float-end'],
+} %}
+
+{% set align = align ? align_classes[align]: [] %}
+{% set responsive = responsive ? ['img-fluid'] : [] %}
+{% set thumbnails = thumbnails ? ['img-thumbnail'] : [] %}
+{% set rounded = rounded ? ['rounded'] : [] %}
+{% set image_utility_classes = image_utility_classes is defined ? image_utility_classes : [] %}
+
+{% set img_classes = []|merge(align)|merge(responsive)|merge(thumbnails)|merge(rounded)|merge(image_utility_classes) %}
+
+<img{{attributes.addClass(img_classes)}}/>

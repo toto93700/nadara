@@ -1,0 +1,16 @@
+{#
+/**
+* @file
+* Template for cars-front-page component.
+*/
+#}
+{% set url = file_url(content.field_cars.0['#item'].entity.uri.value)  %}
+<div class="container-fluid px-0 container-cars-front-page ">
+	<div class="row">
+		<div class="col container-text">{{content.body}}
+             </br>
+                  <a href="#" class="btn btn-primary ">En savoir plus</a>
+         </div>
+		<div class="col-7 container-image" style=" background-image: url({{url}});x"></div>
+	</div>
+</div>

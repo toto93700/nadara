@@ -1,0 +1,22 @@
+uuid: c4378e48-5bea-4a1a-a4a3-23ee87afef2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ww_radix_6
+_core:
+  default_config_hash: uplYmwvjTSRnapnJom2-1RrhyZJr_WyILCwUeDGQb9o
+id: ww_radix_6_breadcrumbs
+theme: ww_radix_6
+region: header
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

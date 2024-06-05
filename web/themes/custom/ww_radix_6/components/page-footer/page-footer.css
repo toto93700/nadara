@@ -1,0 +1,18 @@
+.color-theme {
+  background: #a39896;
+}
+
+.navicons li {
+  margin: 0 35px;
+}
+
+.customBtn {
+  border-radius: 0;
+}
+.customBtn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=page-footer.css.map*/

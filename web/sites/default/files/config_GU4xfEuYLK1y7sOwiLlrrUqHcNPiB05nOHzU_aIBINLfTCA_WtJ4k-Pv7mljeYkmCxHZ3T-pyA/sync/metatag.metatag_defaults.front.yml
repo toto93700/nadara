@@ -1,0 +1,13 @@
+uuid: b8a0c484-8d04-4027-bee8-5c6b26c384dd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: "Bienvenue sur notre plateforme de vente de véhicules d'occasion âgés de moins de 3 ans (2022-2024).\r\nNadara Cars vous propose un service d'accompagnement pour l'achat de véhicules d'occasion.\r\nLivraison directe en Algérie par bateau ou disponible dans notre concession locale à Béjaia"
+  keywords: 'nadaracars,nadara'
+  shortlink: '[site:url]'

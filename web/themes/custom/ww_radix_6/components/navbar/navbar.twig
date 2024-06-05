@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Template for Navbar component.
+ *
+ * Available config:
+ * - container: fixed | fluid.
+ * - placement: default | fixed-top | fixed-bottom | sticky-top
+ * - color: light | dark
+ * - navbar_expand: sm | md | lg | xl | false
+ * - navbar_theme: dark | light (default: light)
+ * - navbar_utility_classes: An array of utility classes.
+ *
+ * Available blocks:
+ * - branding
+ * - left
+ * - right
+ */
+#}
+{% set nav_attributes = nav_attributes ?: create_attribute() %}
+
+{% set config = {
+  container: container == 'fixed' ? 'container' : false,
+  placement: placement ?? '',
+  navbar_expand: navbar_expand ?? 'lg',
+  navbar_theme: navbar_theme ?? null,
+} %}
+
+{% 
+  set nav_classes = [
+    'navbar',
+    config.navbar_expand ? 'navbar-expand-' ~ config.navbar_expand : '',
+    'justify-content-between',
+    config.placement,
+    'bg-navbar'
+  ]|merge(navbar_utility_classes ? navbar_utility_classes : []) 
+%}
+
+{% if config.navbar_theme %}
+  {% set nav_attributes = nav_attributes.setAttribute('data-bs-theme', config.navbar_theme) %}
+{% endif %}
+
+<nav {{ nav_attributes.addClass(nav_classes) }}>
+  {% if config.container %}
+    <div class="{{ config.container }}">
+  {% endif %}
+
+  {% block branding %}
+    {{ branding }}
+  {% endblock %}
+
+  {% block navbar_toggler %}
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  {% endblock %}
+
+  <div class="collapse navbar-collapse">
+    {% block left %}
+      {{ left }}
+    {% endblock %}
+
+    {% block right %}
+      {{ right }}
+    {% endblock %}
+  </div>
+
+  {% if config.container %}
+    </div>
+  {% endif %}
+</nav>

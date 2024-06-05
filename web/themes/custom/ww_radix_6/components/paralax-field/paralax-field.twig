@@ -1,0 +1,13 @@
+{#
+/**
+* @file
+* Template for parallax component.
+*/
+#}
+<div class="parallax-container">
+{% set url = file_url(content.field_image.0['#item'].entity.uri.value)  %}
+    <div class="parallax-image" style=" background-image: url({{url}})">
+    </div>
+    <div class="bg-shadow"></div>
+    <div class="containerTitle"><h1 class="title">{{content.field_title}}</h1></div>
+</div>

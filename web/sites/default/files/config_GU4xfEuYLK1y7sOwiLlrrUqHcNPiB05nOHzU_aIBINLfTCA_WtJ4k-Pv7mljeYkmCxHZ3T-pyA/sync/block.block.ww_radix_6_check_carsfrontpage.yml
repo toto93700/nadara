@@ -1,0 +1,30 @@
+uuid: 045b972b-4a86-48b1-af5f-76cd57242f79
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:visitez_la_concession:c942e0f9-84bb-46d9-8b8f-91211dc8e484'
+  module:
+    - block_content
+    - system
+  theme:
+    - ww_radix_6
+id: ww_radix_6_check_carsfrontpage
+theme: ww_radix_6
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:c942e0f9-84bb-46d9-8b8f-91211dc8e484'
+settings:
+  id: 'block_content:c942e0f9-84bb-46d9-8b8f-91211dc8e484'
+  label: 'check_cars front page'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

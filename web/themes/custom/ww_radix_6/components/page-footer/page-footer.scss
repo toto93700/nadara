@@ -1,0 +1,14 @@
+@import "../../src/scss/init";
+
+.navicons li {
+    margin: 0 35px
+}
+.customBtn {
+    
+    border-radius: 0;
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600
+    }
+}

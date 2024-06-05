@@ -1,0 +1,28 @@
+@import "../../src/scss/init";
+
+.wave-container {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  .container-text {
+    font-size: $text-normal;
+    padding: 25px;
+  }
+  
+  .container-image {
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
+.image {
+  padding: 50px 50px;
+  max-height: fit-content;
+  
+  img {
+    max-height: 300px;
+    margin-left: 8% !important;
+  }
+}

@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Breadcrumb
+status: experimental
+description: Breadcrumb component.
+props:
+  type: object
+  properties:
+    breadcrumb:
+      type: array
+      items:
+        type: object
+        properties:
+          url:
+            type: string
+            title: url
+          text:
+            type: string
+            title: text
+        required: ['text']
+    classes:
+      type: array
+      items:
+        type: string
+    attributes:
+      type: Drupal\Core\Template\Attribute

@@ -1,0 +1,30 @@
+uuid: 1d6bdf98-d419-46bf-86cf-277c710416e4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:newscars:cd3451ed-be9f-4f0a-b528-fda42b43df55'
+  module:
+    - block_content
+    - system
+  theme:
+    - ww_radix_6
+id: ww_radix_6_newscars
+theme: ww_radix_6
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:cd3451ed-be9f-4f0a-b528-fda42b43df55'
+settings:
+  id: 'block_content:cd3451ed-be9f-4f0a-b528-fda42b43df55'
+  label: newsCars
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,57 @@
+{#
+/**
+* @file
+* Template for car-teaser component.
+*/
+#}
+
+
+
+ {% set image_url =  file_url(content.field_image['#items'].0.entity.uri.Value[0].value) %} 
+
+{% if node is not empty %}
+    {# Récupérer le chemin vers le node #}
+    {% set node_path = path('entity.node.canonical', {'node': node.id}) %}
+{% endif %}
+
+<div class="card mb-3" style="">
+  <div class="row g-0">
+    <div class="col-xs-12 col-xl-4 col-sm-12">
+    		<a  href="{{ node_path }}" class=" " style="width:fit-content">
+          <img  src="{{ file_url(image_url) }}" style="" class="img-fluid rounded-start  img car-img" alt="...">
+        </a>
+    </div>
+    <div class="col p-3">
+      <div class="card-body">
+           {% set body = content.field_name['#items'].value %}
+           {% set price = content.field_price['#items'].value %}
+           {% set price_suffix = content.field_price["#items"].getSetting('suffix') %}
+        <h3 class="card-title"><strong>{{ body }} </br> {{price|number_format(0, '.', ' ', 3) }} {{price_suffix}} - {{(price*250)|number_format(0, '.', ' ', 3) }} DZD </strong></h3>
+        <p class="card-text">{{content.body}}</p>
+    {% set current_time = 'now'|date('U') %}
+    {% set created_time = node.created.value %}
+    {% set diff_days = ((current_time - created_time) / (60 * 60 * 24))|round %}
+      {% set diff_months = (diff_days / 30)|round %}
+    {% set diff_years = (diff_days / 365)|round %}
+   
+        <p class="card-text"><small class="text-muted">  {% if diff_days == 0 %}
+            Mis en ligne aujourd'hui
+        {% elseif diff_days == 1 %}
+            Mis en ligne il y a 1 jour
+        {% elseif diff_days < 30 %}
+            Mis en ligne il y a {{ diff_days }} jours
+        {% elseif diff_months < 12 %}
+            Mis en ligne il y a {{ diff_months|round }} mois
+        {% else %}
+            Mis en ligne il y a {{ diff_years|round }} an(s)
+        {% endif %}
+           </small>
+        </p>
+   
+
+        <p> <a href="{{ node_path }}" class="text-decoration-none typotheme-color-1"> En savoir plus -></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+		

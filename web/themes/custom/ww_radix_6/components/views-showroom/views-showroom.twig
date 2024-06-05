@@ -1,0 +1,115 @@
+{#
+/**
+* @file
+* Template for views-showroom component.
+*/
+#}
+
+{% set view_view_utility_classes = view_view_utility_classes|default([]) %}
+
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+   
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+    css_name ? 'view-' ~ css_name,
+  ]|merge(view_view_utility_classes)
+%}
+
+<div{{attributes.addClass(classes)}}>
+	<div class="container">
+		<div>
+			<h1 class="text-center" style="">
+				<strong>ShowRoom</strong>
+			</h1>
+			<div class="s_text_highlight o_colored_level o_cc o_cc3 my-3 w-100 text-center" data-snippet="s_text_highlight" data-name="Surlignage du texte">
+				<div class="container">
+					<h3 class="o_default_snippet_text">Concession
+						<font class="typotheme-color-1" style="">Algérie</font>
+					</h3>
+					<p class="o_default_snippet_text">
+						Les voitures ci-dessous sont déjà disponibles à la vente en
+						<font class="typotheme-color-1" style="color:rgb(6, 223, 134)">Algérie
+						</font>!
+						<br></p>
+					<div class="s_hr text-start pt0 pb0" data-snippet="s_hr" data-name="Séparateur">
+						<hr class="w-100 mx-auto" style="border-top-width: 3px; border-top-color: rgb(6, 223, 134);">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% if header %}
+		<div class="view-header">
+			{{ header }}
+		</div>
+	{% endif %}
+
+	{% if exposed %}
+		<div class="view-filters">
+			{{ exposed }}
+		</div>
+	{% endif %}
+
+	{% if attachment_before %}
+		<div class="attachment attachment-before">
+			{{ attachment_before }}
+		</div>
+	{% endif %}
+
+	{% if rows %}
+		<div class="pt-5" style="background-color: #f7f6f6;">
+			<div class="view-content container ">
+				<div class="o_colored_level col-lg-12 col-12" style="background-color: #f7f6f6;">
+					<h4 class="typotheme-color-1">
+						<b class="typo-theme-color-1">Voiture disponible</b>
+					</h4>
+					<p>Les voitures présentées sont toutes disponibles à la vente, elles sont toutes récentes (-3 ans) et dans un état quasiment impeccable. Notre garage veille à la bonne qualité des voitures mises en vente.</p>
+					<p>Pour réserver votre essai, veuillez prendre contact avec nous via&nbsp;<strong>Whatsapp
+						</strong>: +33621611357 ou par
+						<strong>mail
+						</strong>: nadaracars@gmail.com</p>
+					<div class="s_hr text-start pb0 pt0" data-snippet="s_hr" data-name="Séparateur">
+						<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;">
+					</div>
+					<p><br></p>
+				</div>
+				{{ rows }}
+			</div>
+		</div>
+	{% elseif empty %}
+		<div class="view-empty">
+			{{ empty }}
+		</div>
+	{% endif %}
+
+	{% if pager %}
+		{{ pager }}
+	{% endif %}
+
+	{% if attachment_after %}
+		<div class="attachment attachment-after">
+			{{ attachment_after }}
+		</div>
+	{% endif %}
+
+	{% if more %}
+		{{ more }}
+	{% endif %}
+
+	{% if footer %}
+		<div class="view-footer">
+			{{ footer }}
+		</div>
+	{% endif %}
+
+	{% if feed_icons %}
+		<div class="feed-icons">
+			{{ feed_icons }}
+		</div>
+	{% endif %}
+</div>

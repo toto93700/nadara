@@ -1,0 +1,97 @@
+{% set image_url2 =  file_url(content.field_image['#items'].1.entity.uri.Value[0].value) %}
+{% set image_url3 =  file_url(content.field_image['#items'].2.entity.uri.Value[0].value) %}
+
+<section>
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center fw-bold">{{ content.field_name }} 	</h1>
+
+			<p class="text-center h1" style="">{{content.field_price['#items'].value|number_format(0, '.', ' ', 3) }} € </br>{{ (content.field_price['#items'].value * 250)|number_format(0, '.', ' ', 3) }}
+ DZD</p>
+			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					{% for img in content.field_image['#items'] %}
+						{% set image_url = file_url(img.entity.uri.Value[0].value) %}
+						<div class="carousel-item {{ loop.first ? 'active' : '' }}">
+							<div class="img-container">
+								<img class="img img-fluid mx-auto d-block" src="{{ image_url }}" alt="...">
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+			<ul class="d-flex justify-content-center indicator">
+				{% for img in content.field_image['#items'] %}
+					{% set image_url = file_url(img.entity.uri.Value[0].value) %}
+					<li data-bs-target="#carouselExampleControls" data-bs-slide-to="{{ loop.index0 }}" class="{{ loop.first ? 'active' : '' }}">
+						<div class="carousel-indicator-ps" style="background-image: url('{{ image_url }}');"></div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="s_table_of_content pt24 o_cc o_cc1 o_colored_level pb0" data-snippet="s_table_of_content" data-name="Table des matières">
+	<div class="container">
+		<div class="row s_nb_column_fixed">
+			<div class="col-lg-3 s_table_of_content_navbar_wrap s_table_of_content_navbar_sticky s_table_of_content_vertical_navbar d-print-none d-none d-lg-block o_not_editable o_cc o_cc1 o_colored_level" data-name="Navbar">
+				<div class="s_table_of_content_navbar list-group o_no_link_popover" style="top: 20px; max-height: calc(-40px + 100vh);">
+					<a href="#table_of_content_heading_1712257892822_79" class="table_of_content_link list-group-item list-group-item-action py-2 border-0 rounded-0 active" spellcheck="false">Présentation véhicule</a>
+					<a href="#table_of_content_heading_1712257892823_80" class="table_of_content_link list-group-item list-group-item-action py-2 border-0 rounded-0" spellcheck="false">Description</a>
+				</div>
+			</div>
+			<div class="col-lg-9 s_table_of_content_main oe_structure oe_empty o_colored_level" data-name="Content" data-editor-message-default="true" data-editor-message="GLISSEZ UN BLOC ICI">
+				<section class="s_text_block pt0 pb16 o_colored_level" data-snippet="s_text_block" data-name="Text">
+					<div class="container s_allow_columns">
+						<h3 id="table_of_content_heading_1712257892822_79" data-anchor="true">Présentation véhicule</h3>
+						{{ content.field_presentation }}
+					</div>
+				</section>
+				<section class="s_text_block pt0 pb16 o_colored_level" data-snippet="s_text_block" data-name="Text">
+					<div class="s_allow_columns container">
+						<h3 id="table_of_content_heading_1712257892823_80" data-anchor="true">Description</h3>
+						{{ content.body }}
+						<p>
+
+							<button id="show-webform-button" class="btn btn-primary">Contacer l'annonceur</button>
+							<span id="show-webform-span">Ou</span>
+							<a class="btn btn-primary" href="http://wa.me/33611462810?text=Bonjour%20j%27ai%20une%20question." title="Contact Whatsapp">Contact Whatsapp</a>
+
+							<div id="webform-content" style="display: none;">
+								{{ content.webform }}
+							</div>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var button = document.getElementById('show-webform-button');
+	var span = document.getElementById('show-webform-span');
+    var webformContent = document.getElementById('webform-content');
+    
+    button.addEventListener('click', function () {
+      webformContent.style.display = 'block';
+      
+      // Scroll to the webform content
+      webformContent.scrollIntoView({ behavior: 'smooth' });
+	  button.style.display='none'
+	  span.style.display='none'
+    });
+  });
+</script>

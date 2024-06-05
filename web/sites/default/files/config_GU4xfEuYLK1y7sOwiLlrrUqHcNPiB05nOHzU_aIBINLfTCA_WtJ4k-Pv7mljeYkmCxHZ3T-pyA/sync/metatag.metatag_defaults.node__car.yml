@@ -1,0 +1,8 @@
+uuid: 70036bd4-e7a4-4345-9b17-3f3334debf1c
+langcode: en
+status: true
+dependencies: {  }
+id: node__car
+label: 'Content: car'
+tags:
+  keywords: '[node:field_tags]'

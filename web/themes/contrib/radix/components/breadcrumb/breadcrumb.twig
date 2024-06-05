@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Template for a Breadcrumb component.
+ *
+ * Available config:
+ * - breadcrumb_utility_classes: An array of utility classes.
+ */
+#}
+
+{% set breadcrumb_utility_classes = breadcrumb_utility_classes ? breadcrumb_utility_classes : [] %}
+{% set classes = [
+  'breadcrumb',
+  'container',
+  'mt-3',
+]|merge(breadcrumb_utility_classes) %}
+{% set breadcrumb_attributes = breadcrumb_attributes ?: create_attribute() %}
+
+{% block breadcrumb %}
+  {% if breadcrumb %}
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" {{ breadcrumb_attributes.addClass(classes) }}>
+      <ol class="breadcrumb bg-light py-2 px-3 my-2">
+        {% for item in breadcrumb %}
+          <li class="breadcrumb-item {{ not item.url ? 'active' }}">
+            {% if item.url %}
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endif %}
+{% endblock %}

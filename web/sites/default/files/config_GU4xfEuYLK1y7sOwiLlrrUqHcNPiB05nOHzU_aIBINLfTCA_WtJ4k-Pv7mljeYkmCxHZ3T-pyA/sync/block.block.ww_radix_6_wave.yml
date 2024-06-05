@@ -1,0 +1,30 @@
+uuid: da5e650f-7dcc-4a3e-bc3b-fc0e85196433
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:wave:8383e41c-8475-49bd-a989-c9f02da74d84'
+  module:
+    - block_content
+    - system
+  theme:
+    - ww_radix_6
+id: ww_radix_6_wave
+theme: ww_radix_6
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:8383e41c-8475-49bd-a989-c9f02da74d84'
+settings:
+  id: 'block_content:8383e41c-8475-49bd-a989-c9f02da74d84'
+  label: wave
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

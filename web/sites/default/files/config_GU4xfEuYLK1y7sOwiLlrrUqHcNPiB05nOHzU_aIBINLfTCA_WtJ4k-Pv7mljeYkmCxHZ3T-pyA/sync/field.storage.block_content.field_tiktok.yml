@@ -1,0 +1,19 @@
+uuid: b5bd95c9-3e08-4a2a-b015-b2a6a4b648c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_tiktok
+field_name: field_tiktok
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

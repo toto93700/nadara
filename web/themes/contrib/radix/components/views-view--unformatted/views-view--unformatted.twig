@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Implements a template to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. Can be empty.
+ * - rows: An array of the view's row items. Each row contains:
+ *   - attributes: The HTML attributes for the row.
+ *   - content: The actual content of the row.
+ * - view: The view object.
+ * - default_row_class: A boolean indicating whether default row classes should be used.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+{% if title %}
+  {% include 'radix:heading' with {
+    heading_html_tag: 'h3',
+    content: title
+  } %}
+{% endif %}
+
+{% for row in rows %}
+  {% set row_classes = default_row_class ? ['views-row'] : [] %}
+  
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}

@@ -1,0 +1,8 @@
+uuid: ebe44503-fd14-4929-8531-0567138d9243
+langcode: en
+status: true
+dependencies: {  }
+id: newscars
+label: newsCars
+revision: 0
+description: 'les 3 dernières voitures insérées dans le bo'

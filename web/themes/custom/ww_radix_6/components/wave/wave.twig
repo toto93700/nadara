@@ -1,0 +1,20 @@
+
+{% set bg = file_url(content.field_bg.0["#file"].uri.value)  %}
+
+<div class="wave-container row align-item-center px-5" style="background-image: url({{bg}}) ;color:white">
+    {% set url = file_url(content.field_imageleft.0['#item'].entity.uri.value)  %}
+    {% set height = 0 %}
+    <div class="col p-3 pt-5">
+        <div class="container-text">
+            {{content.body}}
+            </br>
+                  <a href="/#" class="btn btn-primary ">En savoir plus</a>
+        </div>
+      
+    </div>
+    <div class="col p-3 container-image">
+        <div class="image">
+            <img class="img img-fluid mx-auto ml-5" height='fit-content' src="https://nadaracars.odoo.com/web_editor/image_shape/website.s_text_image_default_image/web_editor/geometric/geo_square_2.svg">
+        </div>
+    </div>
+</div>
